@@ -1,19 +1,17 @@
-import React, { useEffect, Suspense, lazy } from 'react'
+import React, { useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Lenis from 'lenis'
 import Hero3D from './components/Hero3D.jsx'
 import BackgroundStars from './components/BackgroundStars.jsx'
 import Section from './components/Section.jsx'
 import MagneticButton from './components/MagneticButton.jsx'
-
-// Lazy load components for better performance
-const About = lazy(() => import('./components/About.jsx'))
-const Skills = lazy(() => import('./components/Skills.jsx'))
-const Projects = lazy(() => import('./components/Projects.jsx'))
-const Experience = lazy(() => import('./components/Experience.jsx'))
-const Education = lazy(() => import('./components/Education.jsx'))
-const Certifications = lazy(() => import('./components/Certifications.jsx'))
-const Contact = lazy(() => import('./components/Contact.jsx'))
+import About from './components/About.jsx'
+import Skills from './components/Skills.jsx'
+import Projects from './components/Projects.jsx'
+import Experience from './components/Experience.jsx'
+import Education from './components/Education.jsx'
+import Certifications from './components/Certifications.jsx'
+import Contact from './components/Contact.jsx'
 
 export default function App() {
   useEffect(() => {
@@ -46,47 +44,33 @@ export default function App() {
 
       <Hero3D />
 
-      <Suspense fallback={<div style={{ height: '400px' }} />}>
-        <Section id="about" title="About Me" subtitle="Systems Engineering • MBSE • SysML">
-          <About />
-        </Section>
-      </Suspense>
+      <Section id="about" title="About Me" subtitle="Systems Engineering • MBSE • SysML">
+        <About />
+      </Section>
       
-      <Suspense fallback={<div style={{ height: '400px' }} />}>
-        <Section id="education" title="Education" subtitle="ISAE-SUPAERO • SRM">
-          <Education />
-        </Section>
-      </Suspense>
+      <Section id="education" title="Education" subtitle="ISAE-SUPAERO • SRM">
+        <Education />
+      </Section>
 
-      <Suspense fallback={<div style={{ height: '400px' }} />}>
-        <Section id="skills" title="Core Skills" subtitle="Technical • Tools • Soft Skills • Languages">
-          <Skills />
-        </Section>
-      </Suspense>
+      <Section id="skills" title="Core Skills" subtitle="Technical • Tools • Soft Skills • Languages">
+        <Skills />
+      </Section>
 
-      <Suspense fallback={<div style={{ height: '400px' }} />}>
-        <Section id="projects" title="Projects" subtitle="Aerospace • MBSE • Systems">
-          <Projects />
-        </Section>
-      </Suspense>
+      <Section id="projects" title="Projects" subtitle="Aerospace • MBSE • Systems">
+        <Projects />
+      </Section>
 
-      <Suspense fallback={<div style={{ height: '400px' }} />}>
-        <Section id="experience" title="Experience" subtitle="Engineering • Leadership">
-          <Experience />
-        </Section>
-      </Suspense>
+      <Section id="experience" title="Experience" subtitle="Engineering • Leadership">
+        <Experience />
+      </Section>
 
-      <Suspense fallback={<div style={{ height: '400px' }} />}>
-        <Section id="certifications" title="Certifications" subtitle="MBSE • System Architecting • Google PM">
-          <Certifications />
-        </Section>
-      </Suspense>
+      <Section id="certifications" title="Certifications" subtitle="MBSE • System Architecting • Google PM">
+        <Certifications />
+      </Section>
 
-      <Suspense fallback={<div style={{ height: '400px' }} />}>
-        <Section id="contact" title="Contact" subtitle="Let's build the future">
-          <Contact />
-        </Section>
-      </Suspense>
+      <Section id="contact" title="Contact" subtitle="Let's build the future">
+        <Contact />
+      </Section>
 
       <footer className="footer">
         <div>© {new Date().getFullYear()} Shathyanaraynan Balashanmugam</div>

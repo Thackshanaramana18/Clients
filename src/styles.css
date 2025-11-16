@@ -84,3 +84,14 @@ body{
 .input{padding:12px 14px; border-radius:10px; border:1px solid var(--border); background:var(--surface); color:var(--text); transition:all 0.2s}
 .input:focus{outline:1px solid var(--accent); background:var(--bg)}
 textarea.input{min-height:120px}
+
+/* Dynamic Animations */
+@keyframes subtle-zoom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+@keyframes fade-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.95; }
+}

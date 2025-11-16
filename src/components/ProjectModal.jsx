@@ -398,7 +398,6 @@ export default function ProjectModal({ project, isOpen, onClose }) {
           </motion.div>
         </>
       )}
-    </AnimatePresence>,
-    document.body
-  )
+    </AnimatePresence>
+  , document.body)
 }
